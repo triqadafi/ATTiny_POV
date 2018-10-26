@@ -4,8 +4,8 @@
 #define LED1 0
 #define LED2 1
 #define LED3 2
-#define LED4 3
-#define LED5 4
+#define LED4 4
+#define LED5 3
 
 #define FI_STATE_0 10
 #define FI_STATE_A 11
@@ -38,9 +38,9 @@ void setup()
 }
 
 int zero[] = {0, 0, 0, 0, 0};
-int i[] = {0, 17, 31, 17, 0};
-int love[] = {12, 30, 15, 30, 12};
-int u[] = {30, 1, 1, 30, 0};
+int a[] = {17, 17, 31, 17, 17};
+int b[] = {12, 30, 15, 30, 12};
+int c[] = {30, 1, 1, 1, 30};
 
 void displayLED(int _line)
 {
@@ -57,11 +57,11 @@ void loop()
     if(FI_STATE == FI_STATE_0){
       displayLED(zero[led]);
     }else if(FI_STATE == FI_STATE_A){
-      displayLED(i[led]);
+      displayLED(a[led]);
     }else if(FI_STATE == FI_STATE_B){
-      displayLED(love[led]);
+      displayLED(b[led]);
     }else if(FI_STATE == FI_STATE_C){
-      displayLED(u[led]);
+      displayLED(c[led]);
     }
     delay(3);
   }
